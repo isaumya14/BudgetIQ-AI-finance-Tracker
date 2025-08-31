@@ -7,6 +7,8 @@ import { getCurrentBudget } from "@/actions/budget";
 import BudgetProgress from "./_components/budget-progress";
 import { Suspense } from "react";
 import DashboardOverview from "./_components/transaction-overview";
+export const dynamic = "force-dynamic";
+
 
 export default async function DashboardPage() {
   const accounts = await getUserAccounts();
