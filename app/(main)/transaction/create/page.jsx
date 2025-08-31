@@ -10,7 +10,8 @@ export const dynamic = 'force-dynamic';
 
 const AddTransactionPage = async ({ searchParams }) => {
     // The error occurs on this line, but the fix is the export above.
-    const editId = searchParams?.edit;
+    const params = await searchParams; // ✅ Await it
+    const editId = params?.edit;
     
     const accounts = await getUserAccounts();
     let initialData = null;
